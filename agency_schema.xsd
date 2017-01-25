@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">
+        <xs:element name="Agency">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element ref="Groups" maxOccurs="unbounded"/>
+      				<xs:element ref="Subgroups" maxOccurs="unbounded"/>
+      			</xs:sequence>
+      		</xs:complexType>
+      		<xs:key name="groupKey">
+      			<xs:selector xpath="./Groups/Group"/>
+      			<xs:field xpath="@ID"/>
+      		</xs:key>
+      		<xs:keyref name="groupReference" refer="groupKey">
+      			<xs:selector xpath="./Subgroup"/>
+      			<xs:field xpath="./@group"/>
+      		</xs:keyref>
+      	</xs:element>
+
+        <xs:element name="Groups">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="Group" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="country" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Group">
+          <xs:complexType>
+            <xs:attribute name="ID" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="Country" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Subgroups">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element ref="Subgroup" maxOccurs="unbounded"/>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+
+        <xs:element name="Subgroup">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element ref="City"/>
+      				<xs:element ref="Trips"/>
+      			</xs:sequence>
+      			<xs:attribute name="ID" use="required">
+      				<xs:simpleType>
+      					<xs:restriction base="xs:string">
+      						<xs:pattern value="[0-9]{4}"/>
+      					</xs:restriction>
+      				</xs:simpleType>
+      			</xs:attribute>
+            <xs:attribute name="group" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:attribute>
+          </xs:complexType>
+      		<xs:key name="IDKey">
+      			<xs:selector xpath="Agency/Subgroups/Subgroup"/>
+      			<xs:field xpath="@ID"/>
+      		</xs:key>
+      	</xs:element>
+
+      	<xs:element name="City">
+      		<xs:simpleType>
+      			<xs:restriction base="xs:string"/>
+      		</xs:simpleType>
+      	</xs:element>
+
+        <xs:element name="Trips">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element ref="Trip" maxOccurs="unbounded"/>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+
+        <xs:element name="Trip">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element ref="Passengers"/>
+      				<xs:element ref="DateFrom"/>
+      				<xs:element ref="DateTo"/>
+      				<xs:element ref="Description"/>
+              <xs:element ref="Type">
+              <xs:element ref="Price">
+      			</xs:sequence>
+            <xs:attribute name="ID" use="required">
+      				<xs:simpleType>
+      					<xs:restriction base="xs:string">
+      						<xs:pattern value="[0-9]{4}"/>
+      					</xs:restriction>
+      				</xs:simpleType>
+      			</xs:attribute>
+      		</xs:complexType>
+      	</xs:element>
+
+        <xs:element name="Passengers">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element ref="Passenger" maxOccurs="unbounded"/>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+
+      	<xs:element name="Passenger">
+          <xs:complexType>          
+            <xs:attribute name="Name" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+      	<xs:element name="DateFrom">
+            <xs:simpleType>
+              <xs:restriction base="xs:date"/>
+            </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="DateTo">
+            <xs:simpleType>
+              <xs:restriction base="xs:date"/>
+            </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="Type">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="Price">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{4}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="Description">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+</xs:schema>

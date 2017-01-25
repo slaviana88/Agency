@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="agency.xsl"?>
+
+<Agency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agency_schema.xsd">
+	<Groups name="Екскурзии">
+		<Group ID="1" Country="Екскурзии в България"/>
+		<Group ID="2" Country="Екскурзии в Гърция"/>
+    <Group ID="3" Country="Екскурзии в Испания"/>
+	</Groups>
+  <Subgroups>
+    <Subgroup ID="10" group="1">
+      <City> Пловдив </City>
+      <no src="pld.jpeg"/>
+      <Trips>
+        <Trip ID="100">
+          <DateFrom>2017-03-27</DateFrom>
+          <DateTo>2017-03-29</DateTo>
+          <Type>Хотел Флора</Type>
+          <Price> 133лв </Price>
+          <Description>В цената са включени паркинг, басейн и парна баня.</Description>
+          <Passengers>
+            <Passenger>
+              <Name>Иво Иванов</Name>
+            </Passenger>
+            <Passenger>
+              <Name>Ангел Димитров</Name>
+            </Passenger>
+          </Passengers>
+        </Trip>
+        <Trip ID="101">
+          <DateFrom>2017-04-27</DateFrom>
+          <DateTo>2017-04-29</DateTo>
+          <Type>Kъща за гости Дядо Йоцо</Type>
+          <Price> 153лв </Price>
+          <Description>На страхотно място. Допълнително легло на цена 23лв.</Description>
+          <Passengers>
+            <Passenger>
+              <Name>Георги Иванов</Name>
+            </Passenger>
+            <Passenger>
+              <Name>Моника Димитрова</Name>
+            </Passenger>
+          </Passengers>
+        </Trip>
+      </Trips>
+    </Subgroup>
+    <Subgroup ID="11" group="1">
+      <City> Велико Търново </City>
+      <no src="turnovo.jpg"/>
+      <Trips>
+        <Trip ID="102">
+          <DateFrom>2017-02-25</DateFrom>
+          <DateTo>2017-02-27</DateTo>
+          <Type>Хотел Асеневцо</Type>
+          <Price> 250лв </Price>
+          <Description>Хотел със страхотен изглед към Царавец. Включено е използване на СПА.</Description>
+          <Passengers>
+            <Passenger>
+              <Name>Антоанета Георгиева</Name>
+            </Passenger>
+            <Passenger>
+              <Name>Красимира Тодорова</Name>
+            </Passenger>
+            <Passenger>
+              <Name>Мартин Божилов</Name>
+            </Passenger>
+          </Passengers>
+        </Trip>
+      </Trips>
+    </Subgroup>
+    <Subgroup ID="12" group="2">
+      <City> Атина </City>
+      <no src="atina.jpeg"/>
+      <Trips>
+        <Trip ID="103">
+          <DateFrom>2017-07-5</DateFrom>
+          <DateTo>2017-03-10</DateTo>
+          <Type>Хотел Пападопулус</Type>
+          <Price> 550лв</Price>
+          <Description>Спеацилна оферта с включена туристическа обиколка до най-големте забележителности.</Description>
+            <Passengers>
+              <Passenger>
+                <Name>Моника Георгиева</Name>
+              </Passenger>
+              <Passenger>
+                <Name>Александър Христов</Name>
+              </Passenger>
+            </Passengers>
+        </Trip>
+      </Trips>
+    </Subgroup>
+    <Subgroup ID="13" group="2">
+      <City> Санторини </City>
+      <no src="santorini.jpeg"/>
+      <Trips>
+        <Trip ID="104">
+          <DateFrom>2017-05-05</DateFrom>
+          <DateTo>2017-05-10</DateTo>
+          <Type>Вила Санторини </Type>
+          <Price> 850лв</Price>
+          <Description>Офертата включва транспорт и туристическа застраховка. Допълно заплащане за закуска и вечеря.</Description>
+        <Passengers>
+          <Passenger>
+            <Name>Ива Георгиева</Name>
+          </Passenger>
+          <Passenger>
+            <Name>Даниел Христов</Name>
+          </Passenger>
+        </Passengers>
+      </Trip>
+      </Trips>
+    </Subgroup>
+    <Subgroup ID="14" group="3">
+      <City> Мадрид </City>
+      <no src="madrid.jpeg"/>
+      <Trips>
+        <Trip ID="105">
+          <DateFrom>2017-05-05</DateFrom>
+          <DateTo>2017-05-10</DateTo>
+          <Type>Хотел Барко</Type>
+          <Price> 450лв</Price>
+          <Description>Офертата не включва транспорт. Не поддържа допълнително настаняване.</Description>
+        </Trip>
+      </Trips>
+    </Subgroup>
+    <Subgroup ID="15" group="1">
+      <City> Варна </City>
+      <no src="varna.jpg"/>
+      <Trips>
+        <Trip ID="106">
+          <DateFrom>2017-08-05</DateFrom>
+          <DateTo>2017-08-12</DateTo>
+          <Type>Хотел Черно море</Type>
+          <Price> 400лв</Price>
+          <Description>Хотела се намира в центъра на морската столица, в близост до плажа. В цената е включена закуска.</Description>
+          <Passengers>
+            <Passenger>
+              <Name>Иван Димитров</Name>
+            </Passenger>
+            <Passenger>
+              <Name>Даниела Манолева</Name>
+            </Passenger>
+          </Passengers>
+        </Trip>
+      </Trips>
+    </Subgroup>
+    <Subgroup ID="14" group="3">
+      <City> Барселона </City>
+      <no src="barselona.jpeg"/>
+      <Trips>
+        <Trip ID="107">
+          <DateFrom>2017-06-05</DateFrom>
+          <DateTo>2017-06-10</DateTo>
+          <Type>Хотел Барко</Type>
+          <Price> 650лв</Price>
+          <Description>Включен транспорт, туристическа застраховка и екскурзовод в града.</Description>
+          <Passengers>
+            <Passenger>
+              <Name>Димана Иванова</Name>
+            </Passenger>
+          </Passengers>
+        </Trip>
+        <Trip ID="108">
+          <DateFrom>2017-07-05</DateFrom>
+          <DateTo>2017-07-10</DateTo>
+          <Type>Хотел Барселона</Type>
+          <Price> 900лв</Price>
+          <Description>Включени закуска, транспорт до забележителностите на града </Description>
+          <Passengers>
+            <Passenger>
+              <Name>Христо Манолев</Name>
+            </Passenger>
+          </Passengers>
+        </Trip>
+      </Trips>
+    </Subgroup>
+  </Subgroups>
+</Agency>
